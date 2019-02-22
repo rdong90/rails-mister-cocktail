@@ -1,0 +1,22 @@
+<h1>All Cocktails</h1>
+<div class="container">
+
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <%= render 'cocktails/card', cocktail: cocktail %>
+  <% end %>
+  </div>
+
+<h1>Create a new cocktail</h1>
+
+ <div class="container center-this">
+ <div class="col-xs-6">
+<%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit class:"btn btn-primary"%>
+<% end %>
+ </div>
+</div>
+
+</div>
+
